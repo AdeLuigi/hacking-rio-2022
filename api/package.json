@@ -1,0 +1,15 @@
+{
+  "name": "clockzero",
+  "version": "1.0.0",
+  "description": "A api that will do something",
+  "main": "index.js",
+  "author": "ClockZero",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon ./index.js localhost 4000"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}
