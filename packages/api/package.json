@@ -2,7 +2,9 @@
   "name": "api",
   "version": "1.0.0",
   "scripts": {
-    "start": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+
   },
   "dependencies": {
     "cross-env": "5.0.5",
