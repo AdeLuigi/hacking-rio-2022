@@ -1,7 +1,7 @@
 const express = require('express')
 const router = require('./routes/routes')
 const app = express()
-const port = 4000
+const port = process.env.PORT || 80
 
 app.use(router)
 
