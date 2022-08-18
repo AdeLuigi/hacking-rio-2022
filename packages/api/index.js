@@ -7,7 +7,7 @@ app.use(cors({
   origin: '*'
 }));
 
-const port = process.env.PORT || 4000
+const port = process.env.PORT ||  4000
 
 app.use(router)
 
