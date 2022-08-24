@@ -9,6 +9,7 @@
   "private": true,
   "scripts": {
     "start": "concurrently \"yarn workspace api start\" \"yarn workspace app start\"",
+    "start-api": "yarn workspace api start",
     "postinstall": "if [ $CLIENT_ENV ]; then npm run postinstall-client; elif [ $SERVER_ENV ]; then npm run postinstall-server; else echo no environment detected, please set CLIENT_ENV or SERVER_ENV; fi",
     "postinstall-client": "cd packages/app && yarn install && yarn build",
     "postinstall-server": "cd packages/api && yarn install"
@@ -22,6 +23,7 @@
     "concurrently": "^7.3.0"
   },
   "dependencies": {
-    "axios": "^0.27.2"
+    "axios": "^0.27.2",
+    "config": "^3.3.7"
   }
 }
