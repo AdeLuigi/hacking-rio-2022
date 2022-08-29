@@ -12,10 +12,6 @@ router.use(function timeLog(req, res, next) {
 router.get('/', function(req, res) {
   res.send('Birds home page');
 });
-// define the about route
-router.get('/about', function(req, res) {
-  res.send('About birds');
-});
 
 router.post('/user', async function(req, res) {
 
@@ -25,5 +21,26 @@ router.post('/user', async function(req, res) {
 
   return res.status(201).json(user)
 });
+
+router.get('/user', async function(req, res) {
+
+  const users = await User.find()
+
+  return res.status(200).json(users)
+
+});
+
+router.put('/user/:id', async function(req, res) {
+
+  const filter = { _id: req.params.id };
+  const update = { ...req.body };
+  const user = await User.findByIdAndUpdate(filter, update, {
+    new: true
+  })
+
+  return res.status(200).json(user)
+
+});
+
 
 module.exports = router;
