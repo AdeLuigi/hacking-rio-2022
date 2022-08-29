@@ -5,16 +5,11 @@ const app = express()
 const mongoose = require('mongoose')
 const User = require('./schemas/User.schema')
 
+app.use(express.json())
+
 mongoose.connect("mongodb+srv://admin:"+process.env.MONGO_PASSWORD+"@cluster0.ws0tq.mongodb.net/test", () => {
   console.log("conectou no mongo")
 }, e => console.log(e))
-
-async function run() {
-  const user = await User.create({name: "Ademario Vitor", age: 23 })
-  console.log(user)
-}
-
-run()
 
 app.use(cors({
   origin: '*'
