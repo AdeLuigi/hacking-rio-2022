@@ -9,12 +9,12 @@ const User = require('./schemas/User.schema')
 //   console.log("conectou no mongo")
 // }, e => console.log(e))
 
-async function run() {
-  const user = await User.create({name: "Ademario Vitor", age: 23 })
-  console.log(user)
-}
+// async function run() {
+//   const user = await User.create({name: "Ademario Vitor", age: 23 })
+//   console.log(user)
+// }
 
-run()
+// run()
 
 app.use(cors({
   origin: '*'
