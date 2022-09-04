@@ -7,7 +7,9 @@ const User = require('./schemas/User.schema')
 
 app.use(express.json())
 
-mongoose.connect("mongodb+srv://admin:"+process.env.MONGO_PASSWORD+"@cluster0.ws0tq.mongodb.net/test", () => {
+mongoose.connect("mongodb+srv://admin:"+process.env.MONGO_PASSWORD+"@cluster0.ws0tq.mongodb.net/test", {
+  enableUtf8Validation:false
+} ,() => {
   console.log("conectou no mongo")
 }, e => console.log(e))
 

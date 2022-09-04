@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var userRoute = require('./user.route')
+var userRate = require('./userRate.route')
+var graphRoute = require('./graphRoute')
 
 // middleware that is specific to this router
 router.use(function timeLog(req, res, next) {
@@ -13,6 +15,8 @@ router.get('/', function(req, res) {
 });
 
 router.use(userRoute)
+router.use(userRate)
+router.use(graphRoute)
 
 
 module.exports = router;
