@@ -5,6 +5,7 @@ const Graph = require('../schemas/Graph.schema')
 
 router.post('/graph', async function(req, res) {
 
+    
     const { category, community, description, health, news } = req.body
   
     const graph = await Graph.create({category, community, description, health, news, createdAt: new Date(), upadatedAt: new Date()})

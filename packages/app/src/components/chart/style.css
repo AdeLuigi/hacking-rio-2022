@@ -1,0 +1,9 @@
+.radial-bar-content {
+width: 100%;
+height: 100%;
+position: relative;
+}
+
+.radial-bar-content h3{
+    position: absolute;
+}

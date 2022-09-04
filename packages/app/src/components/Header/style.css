@@ -1,0 +1,21 @@
+.content-header, .content-header-img {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    box-sizing: content-box;
+    height: 100%;
+}
+.content-header-img {
+    align-items: center;
+}
+
+.content-header-img img {
+    height: 40px;
+    width: 40px;
+}
+
+.content-header-img p {
+    color: white;
+    margin: 0;
+}
+
