@@ -23,11 +23,10 @@ router.get('/graph', async function(req, res) {
 router.put('/graph/:id', async function(req, res) {
 
     const filter = { _id: req.params.id };
-    const graph = await Graph.findById(filter)
-
-    graph.likes = graph.likes + 1;
-
-    graph.save();
+    const update = { ...req.body };
+    const graph = await Graph.findByIdAndUpdate(filter, update, {
+        new: true
+    })
 
     return res.status(200).json(graph)
 
