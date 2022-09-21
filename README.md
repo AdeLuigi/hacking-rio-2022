@@ -46,4 +46,5 @@ O site também informa sobre dados que foram coletados anteriormente em outras p
 
 ## ❤️ Hacking Rio❤️
 ![alt text](sources/celebration.png)
+Dentre 1700 participantes e mais de 100 equipes, conseguimos ficar entre as 13 finalistas 🚀🚀🚀
 
